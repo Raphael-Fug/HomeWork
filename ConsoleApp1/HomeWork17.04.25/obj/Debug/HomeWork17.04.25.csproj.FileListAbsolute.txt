@@ -1,0 +1,7 @@
+D:\code_dev\Winforms\ConsoleApp1\HomeWork17.04.25\bin\Debug\HomeWork17.04.25.exe.config
+D:\code_dev\Winforms\ConsoleApp1\HomeWork17.04.25\bin\Debug\HomeWork17.04.25.exe
+D:\code_dev\Winforms\ConsoleApp1\HomeWork17.04.25\bin\Debug\HomeWork17.04.25.pdb
+D:\code_dev\Winforms\ConsoleApp1\HomeWork17.04.25\obj\Debug\HomeWork17.04.25.csproj.AssemblyReference.cache
+D:\code_dev\Winforms\ConsoleApp1\HomeWork17.04.25\obj\Debug\HomeWork17.04.25.csproj.CoreCompileInputs.cache
+D:\code_dev\Winforms\ConsoleApp1\HomeWork17.04.25\obj\Debug\HomeWork17.04.25.exe
+D:\code_dev\Winforms\ConsoleApp1\HomeWork17.04.25\obj\Debug\HomeWork17.04.25.pdb

@@ -1,0 +1,7 @@
+C:\Users\ADMIN\Desktop\ConsoleApp1\Newton\bin\Debug\Newton.exe.config
+C:\Users\ADMIN\Desktop\ConsoleApp1\Newton\bin\Debug\Newton.exe
+C:\Users\ADMIN\Desktop\ConsoleApp1\Newton\bin\Debug\Newton.pdb
+C:\Users\ADMIN\Desktop\ConsoleApp1\Newton\obj\Debug\Newton.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\ConsoleApp1\Newton\obj\Debug\Newton.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\ConsoleApp1\Newton\obj\Debug\Newton.exe
+C:\Users\ADMIN\Desktop\ConsoleApp1\Newton\obj\Debug\Newton.pdb
