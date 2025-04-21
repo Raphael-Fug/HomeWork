@@ -8,7 +8,4 @@ for i in range(1,a,1):
         Uoc.append(i)
 for item in Uoc:
     Value += item
-if (Value == a):
-    print ("PerfectNumber")
-else:
-    print ("UnPerfectNumber")
+print("PerfectNumber" if Value == a else "UnPerfectNumber")

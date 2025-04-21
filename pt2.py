@@ -4,10 +4,11 @@ b = float(input())
 c = float(input())
 if (a == 0):
     if (b == 0):
-        if (c == 0):
-            print("Vô số nghiệm")
-        else:
-            print("Vô nghiệm")
+        print ("Vô số nghiệm" if (c == 0) else "Vô nghiệm")
+        # if (c == 0):
+        #     print("Vô số nghiệm")
+        # else:
+        #     print("Vô nghiệm")
     else:
         print(f"Có một nghiệm {-b/a}")
 else:
