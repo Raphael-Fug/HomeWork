@@ -1,0 +1,7 @@
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Search\bin\Debug\Search.exe.config
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Search\bin\Debug\Search.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Search\bin\Debug\Search.pdb
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Search\obj\Debug\Search.csproj.AssemblyReference.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Search\obj\Debug\Search.csproj.CoreCompileInputs.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Search\obj\Debug\Search.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Search\obj\Debug\Search.pdb
