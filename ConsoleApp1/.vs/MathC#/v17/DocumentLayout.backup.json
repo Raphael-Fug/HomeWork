@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{920E6063-FEE2-433E-8C31-9F01024F6878}|Search\\Search.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\search\\jumbsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{920E6063-FEE2-433E-8C31-9F01024F6878}|Search\\Search.csproj|solutionrelative:search\\jumbsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{920E6063-FEE2-433E-8C31-9F01024F6878}|Search\\Search.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\search\\sentinelsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{920E6063-FEE2-433E-8C31-9F01024F6878}|Search\\Search.csproj|solutionrelative:search\\sentinelsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{920E6063-FEE2-433E-8C31-9F01024F6878}|Search\\Search.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\search\\linearsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{920E6063-FEE2-433E-8C31-9F01024F6878}|Search\\Search.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\search\\linearsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{920E6063-FEE2-433E-8C31-9F01024F6878}|Search\\Search.csproj|solutionrelative:search\\linearsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\homework17.04.25\\hpt2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|solutionrelative:homework17.04.25\\hpt2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\homework17.04.25\\pt2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|solutionrelative:homework17.04.25\\pt2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\homework17.04.25\\perfectnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|solutionrelative:homework17.04.25\\perfectnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\homework17.04.25\\prime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB95280E-E936-4635-97CD-B3ECDBB4406D}|HomeWork17.04.25\\HomeWork17.04.25.csproj|solutionrelative:homework17.04.25\\prime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,19 +39,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JumbSearch.cs",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Search\\JumbSearch.cs",
+              "RelativeDocumentMoniker": "Search\\JumbSearch.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Search\\JumbSearch.cs",
+              "RelativeToolTip": "Search\\JumbSearch.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA5wB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T16:57:56.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SentinelSearch.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Search\\SentinelSearch.cs",
               "RelativeDocumentMoniker": "Search\\SentinelSearch.cs",
               "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Search\\SentinelSearch.cs",
               "RelativeToolTip": "Search\\SentinelSearch.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T09:17:33.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LinearSearch.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Search\\LinearSearch.cs",
               "RelativeDocumentMoniker": "Search\\LinearSearch.cs",
@@ -71,57 +72,7 @@
               "RelativeToolTip": "Search\\LinearSearch.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAIwBYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T08:50:38.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Hpt2.cs",
-              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\Hpt2.cs",
-              "RelativeDocumentMoniker": "HomeWork17.04.25\\Hpt2.cs",
-              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\Hpt2.cs",
-              "RelativeToolTip": "HomeWork17.04.25\\Hpt2.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T11:00:56.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PerfectNumber.cs",
-              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\PerfectNumber.cs",
-              "RelativeDocumentMoniker": "HomeWork17.04.25\\PerfectNumber.cs",
-              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\PerfectNumber.cs",
-              "RelativeToolTip": "HomeWork17.04.25\\PerfectNumber.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA0AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:30:15.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Prime.cs",
-              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\Prime.cs",
-              "RelativeDocumentMoniker": "HomeWork17.04.25\\Prime.cs",
-              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\Prime.cs",
-              "RelativeToolTip": "HomeWork17.04.25\\Prime.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:27:54.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "pt2.cs",
-              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\pt2.cs",
-              "RelativeDocumentMoniker": "HomeWork17.04.25\\pt2.cs",
-              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\HomeWork17.04.25\\pt2.cs",
-              "RelativeToolTip": "HomeWork17.04.25\\pt2.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBcAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T09:57:55.467Z"
+              "WhenOpened": "2025-04-22T08:50:38.023Z"
             }
           ]
         }
