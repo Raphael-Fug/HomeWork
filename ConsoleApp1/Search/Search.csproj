@@ -43,10 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JumbSearch.cs" />
-    <Compile Include="LinearSearch.cs" />
+    <None Include="JumbSearch.cs" />
+    <None Include="LinearSearch.cs" />
+    <Compile Include="Binary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SentinelSearch.cs" />
+    <None Include="SentinelSearch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

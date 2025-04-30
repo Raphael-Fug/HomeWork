@@ -1,0 +1,7 @@
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\InClass\bin\Debug\InClass.exe.config
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\InClass\bin\Debug\InClass.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\InClass\bin\Debug\InClass.pdb
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\InClass\obj\Debug\InClass.csproj.AssemblyReference.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\InClass\obj\Debug\InClass.csproj.CoreCompileInputs.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\InClass\obj\Debug\InClass.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\InClass\obj\Debug\InClass.pdb

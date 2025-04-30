@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bac.cs" />
+    <None Include="Bac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
