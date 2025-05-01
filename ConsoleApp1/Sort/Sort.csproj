@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{920E6063-FEE2-433E-8C31-9F01024F6878}</ProjectGuid>
+    <ProjectGuid>{EEAA3FA4-B260-4C21-AF8E-0104C739C8D2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Search</RootNamespace>
-    <AssemblyName>Search</AssemblyName>
+    <RootNamespace>Sort</RootNamespace>
+    <AssemblyName>Sort</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="JumbSearch.cs" />
-    <None Include="LinearSearch.cs" />
-    <None Include="Binary.cs" />
+    <Compile Include="InserrionSort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="SentinelSearch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
