@@ -1,0 +1,891 @@
+ # Giải pháp các bài tập duyệt toàn bộ bằng Python và C#
+
+## Bài 1: Tìm tổng hai số
+
+### Python
+```python
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+    return []
+
+# Test
+nums = [2, 7, 11, 15]
+target = 9
+print(two_sum(nums, target))  # Output: [0, 1]
+```
+
+### C#
+```csharp
+using System;
+
+class Program
+{
+    static int[] TwoSum(int[] nums, int target)
+    {
+        for (int i = 0; i < nums.Length; i++)
+        {
+            for (int j = i + 1; j < nums.Length; j++)
+            {
+                if (nums[i] + nums[j] == target)
+                {
+                    return new int[] { i, j };
+                }
+            }
+        }
+        return new int[] { };
+    }
+    
+    static void Main()
+    {
+        int[] nums = { 2, 7, 11, 15 };
+        int target = 9;
+        int[] result = TwoSum(nums, target);
+        Console.WriteLine($"[{string.Join(", ", result)}]");  // Output: [0, 1]
+    }
+}
+```
+
+## Bài 2: Tìm số lớn nhất và nhỏ nhất
+
+### Python
+```python
+def find_min_max(arr):
+    if not arr:
+        return None, None
+    
+    min_val = max_val = arr[0]
+    
+    for num in arr:
+        if num < min_val:
+            min_val = num
+        if num > max_val:
+            max_val = num
+    
+    return min_val, max_val
+
+# Test
+arr = [3, 9, 1, 6, 4, 2]
+min_val, max_val = find_min_max(arr)
+print(f"Min = {min_val}, Max = {max_val}")  # Output: Min = 1, Max = 9
+```
+
+### C#
+```csharp
+using System;
+
+class Program
+{
+    static (int Min, int Max) FindMinMax(int[] arr)
+    {
+        if (arr.Length == 0)
+            throw new ArgumentException("Array cannot be empty");
+            
+        int min = arr[0];
+        int max = arr[0];
+        
+        for (int i = 1; i < arr.Length; i++)
+        {
+            if (arr[i] < min)
+                min = arr[i];
+            if (arr[i] > max)
+                max = arr[i];
+        }
+        
+        return (min, max);
+    }
+    
+    static void Main()
+    {
+        int[] arr = { 3, 9, 1, 6, 4, 2 };
+        var result = FindMinMax(arr);
+        Console.WriteLine($"Min = {result.Min}, Max = {result.Max}");  // Output: Min = 1, Max = 9
+    }
+}
+```
+
+## Bài 3: Kiểm tra số nguyên tố
+
+### Python
+```python
+import math
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    
+    # Kiểm tra n có chia hết cho 2 hoặc 3
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    
+    # Kiểm tra từ 5 đến căn bậc hai của n
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    
+    return True
+
+# Test
+num = 17
+if is_prime(num):
+    print(f"{num} là số nguyên tố")
+else:
+    print(f"{num} không phải là số nguyên tố")
+```
+
+### C#
+```csharp
+using System;
+
+class Program
+{
+    static bool IsPrime(int n)
+    {
+        if (n <= 1)
+            return false;
+        if (n <= 3)
+            return true;
+            
+        // Kiểm tra n có chia hết cho 2 hoặc 3
+        if (n % 2 == 0 || n % 3 == 0)
+            return false;
+            
+        // Kiểm tra từ 5 đến căn bậc hai của n
+        int i = 5;
+        while (i * i <= n)
+        {
+            if (n % i == 0 || n % (i + 2) == 0)
+                return false;
+            i += 6;
+        }
+        
+        return true;
+    }
+    
+    static void Main()
+    {
+        int num = 17;
+        if (IsPrime(num))
+            Console.WriteLine($"{num} là số nguyên tố");
+        else
+            Console.WriteLine($"{num} không phải là số nguyên tố");
+    }
+}
+```
+
+## Bài 4: Sinh tất cả các hoán vị
+
+### Python
+```python
+def generate_permutations(arr):
+    result = []
+    
+    def backtrack(start):
+        if start == len(arr):
+            result.append(arr.copy())
+            return
+        
+        for i in range(start, len(arr)):
+            # Swap elements
+            arr[start], arr[i] = arr[i], arr[start]
+            # Recursive call
+            backtrack(start + 1)
+            # Backtrack
+            arr[start], arr[i] = arr[i], arr[start]
+    
+    backtrack(0)
+    return result
+
+# Test
+arr = [1, 2, 3]
+permutations = generate_permutations(arr)
+for perm in permutations:
+    print(perm)
+```
+
+### C#
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static List<List<int>> GeneratePermutations(int[] arr)
+    {
+        List<List<int>> result = new List<List<int>>();
+        Backtrack(arr, 0, result);
+        return result;
+    }
+    
+    static void Backtrack(int[] arr, int start, List<List<int>> result)
+    {
+        if (start == arr.Length)
+        {
+            // Add a copy of the current permutation to the result
+            List<int> perm = new List<int>();
+            foreach (int num in arr)
+            {
+                perm.Add(num);
+            }
+            result.Add(perm);
+            return;
+        }
+        
+        for (int i = start; i < arr.Length; i++)
+        {
+            // Swap elements
+            Swap(arr, start, i);
+            // Recursive call
+            Backtrack(arr, start + 1, result);
+            // Backtrack
+            Swap(arr, start, i);
+        }
+    }
+    
+    static void Swap(int[] arr, int i, int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    
+    static void Main()
+    {
+        int[] arr = { 1, 2, 3 };
+        List<List<int>> permutations = GeneratePermutations(arr);
+        
+        foreach (var perm in permutations)
+        {
+            Console.WriteLine($"[{string.Join(", ", perm)}]");
+        }
+    }
+}
+```
+
+## Bài 5: Bài toán người du lịch (TSP)
+
+### Python
+```python
+import sys
+
+def tsp(graph, s):
+    # Lưu tất cả các đỉnh trừ đỉnh đầu tiên
+    vertex = []
+    for i in range(len(graph)):
+        if i != s:
+            vertex.append(i)
+    
+    min_path = sys.maxsize
+    min_path_order = []
+    
+    # Lưu tất cả các hoán vị của đường đi
+    def permute(vertex, l, r):
+        nonlocal min_path, min_path_order
+        
+        if l == r:
+            current_path_weight = 0
+            
+            # Tính trọng số của đường đi hiện tại
+            k = s  # bắt đầu từ đỉnh gốc
+            path_order = [s]
+            
+            for i in range(len(vertex)):
+                current_path_weight += graph[k][vertex[i]]
+                k = vertex[i]
+                path_order.append(k)
+            
+            # Thêm chi phí quay lại đỉnh gốc
+            current_path_weight += graph[k][s]
+            path_order.append(s)
+            
+            # Cập nhật đường đi ngắn nhất
+            if current_path_weight < min_path:
+                min_path = current_path_weight
+                min_path_order = path_order.copy()
+        else:
+            for i in range(l, r + 1):
+                # Swap
+                vertex[l], vertex[i] = vertex[i], vertex[l]
+                # Đệ quy
+                permute(vertex, l + 1, r)
+                # Backtrack
+                vertex[l], vertex[i] = vertex[i], vertex[l]
+    
+    permute(vertex, 0, len(vertex) - 1)
+    return min_path, min_path_order
+
+# Test
+graph = [
+    [0, 10, 15, 20],
+    [10, 0, 35, 25],
+    [15, 35, 0, 30],
+    [20, 25, 30, 0]
+]
+s = 0
+
+min_distance, path = tsp(graph, s)
+print(f"Khoảng cách đường đi ngắn nhất: {min_distance}")
+print(f"Đường đi: {path}")
+```
+
+### C#
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static int MinWeight = int.MaxValue;
+    static List<int> MinPath = new List<int>();
+    
+    static (int, List<int>) TSP(int[,] graph, int s)
+    {
+        int V = graph.GetLength(0);
+        
+        // Lưu tất cả các đỉnh trừ đỉnh đầu tiên
+        List<int> vertex = new List<int>();
+        for (int i = 0; i < V; i++)
+        {
+            if (i != s)
+                vertex.Add(i);
+        }
+        
+        MinWeight = int.MaxValue;
+        MinPath = new List<int>();
+        
+        // Bắt đầu tìm đường đi ngắn nhất
+        Permute(graph, vertex, 0, vertex.Count - 1, s);
+        
+        return (MinWeight, MinPath);
+    }
+    
+    static void Permute(int[,] graph, List<int> vertex, int l, int r, int s)
+    {
+        if (l == r)
+        {
+            // Tính trọng số của đường đi hiện tại
+            int currentWeight = 0;
+            int k = s;  // Bắt đầu từ đỉnh gốc
+            List<int> path = new List<int> { s };
+            
+            for (int i = 0; i < vertex.Count; i++)
+            {
+                currentWeight += graph[k, vertex[i]];
+                k = vertex[i];
+                path.Add(k);
+            }
+            
+            // Thêm chi phí quay lại đỉnh gốc
+            currentWeight += graph[k, s];
+            path.Add(s);
+            
+            // Cập nhật đường đi ngắn nhất
+            if (currentWeight < MinWeight)
+            {
+                MinWeight = currentWeight;
+                MinPath = new List<int>(path);
+            }
+        }
+        else
+        {
+            for (int i = l; i <= r; i++)
+            {
+                // Swap
+                int temp = vertex[l];
+                vertex[l] = vertex[i];
+                vertex[i] = temp;
+                
+                // Đệ quy
+                Permute(graph, vertex, l + 1, r, s);
+                
+                // Backtrack
+                temp = vertex[l];
+                vertex[l] = vertex[i];
+                vertex[i] = temp;
+            }
+        }
+    }
+    
+    static void Main()
+    {
+        int[,] graph = {
+            {0, 10, 15, 20},
+            {10, 0, 35, 25},
+            {15, 35, 0, 30},
+            {20, 25, 30, 0}
+        };
+        int s = 0;
+        
+        var result = TSP(graph, s);
+        
+        Console.WriteLine($"Khoảng cách đường đi ngắn nhất: {result.Item1}");
+        Console.WriteLine($"Đường đi: [{string.Join(" -> ", result.Item2)}]");
+    }
+}
+```
+
+## Bài 6: Tìm tập con có tổng bằng k
+
+### Python
+```python
+def subset_sum(arr, n, k):
+    # Trường hợp cơ sở
+    if k == 0:
+        return True
+    if n == 0:
+        return False
+    
+    # Nếu phần tử cuối cùng lớn hơn k, loại bỏ nó
+    if arr[n-1] > k:
+        return subset_sum(arr, n-1, k)
+    
+    # Kiểm tra cả hai trường hợp:
+    # (1) Bao gồm phần tử cuối cùng
+    # (2) Không bao gồm phần tử cuối cùng
+    return subset_sum(arr, n-1, k) or subset_sum(arr, n-1, k - arr[n-1])
+
+def has_subset_with_sum(arr, k):
+    return subset_sum(arr, len(arr), k)
+
+# Test
+arr = [3, 34, 4, 12, 5, 2]
+k = 9
+if has_subset_with_sum(arr, k):
+    print(f"Tồn tại tập con có tổng bằng {k}")
+else:
+    print(f"Không tồn tại tập con nào có tổng bằng {k}")
+```
+
+### C#
+```csharp
+using System;
+
+class Program
+{
+    static bool SubsetSum(int[] arr, int n, int k)
+    {
+        // Trường hợp cơ sở
+        if (k == 0)
+            return true;
+        if (n == 0)
+            return false;
+            
+        // Nếu phần tử cuối cùng lớn hơn k, loại bỏ nó
+        if (arr[n-1] > k)
+            return SubsetSum(arr, n-1, k);
+            
+        // Kiểm tra cả hai trường hợp:
+        // (1) Bao gồm phần tử cuối cùng
+        // (2) Không bao gồm phần tử cuối cùng
+        return SubsetSum(arr, n-1, k) || SubsetSum(arr, n-1, k - arr[n-1]);
+    }
+    
+    static bool HasSubsetWithSum(int[] arr, int k)
+    {
+        return SubsetSum(arr, arr.Length, k);
+    }
+    
+    static void Main()
+    {
+        int[] arr = { 3, 34, 4, 12, 5, 2 };
+        int k = 9;
+        
+        if (HasSubsetWithSum(arr, k))
+            Console.WriteLine($"Tồn tại tập con có tổng bằng {k}");
+        else
+            Console.WriteLine($"Không tồn tại tập con nào có tổng bằng {k}");
+    }
+}
+```
+
+## Bài 7: Bài toán tám quân hậu
+
+### Python
+```python
+def is_safe(board, row, col, n):
+    # Kiểm tra hàng hiện tại
+    for i in range(col):
+        if board[row][i] == 1:
+            return False
+    
+    # Kiểm tra đường chéo trên bên trái
+    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+        if board[i][j] == 1:
+            return False
+    
+    # Kiểm tra đường chéo dưới bên trái
+    for i, j in zip(range(row, n, 1), range(col, -1, -1)):
+        if board[i][j] == 1:
+            return False
+    
+    return True
+
+def solve_n_queens_util(board, col, n, solutions):
+    # Nếu tất cả các quân hậu đã được đặt
+    if col >= n:
+        solution = []
+        for i in range(n):
+            row = []
+            for j in range(n):
+                row.append(board[i][j])
+            solution.append(row)
+        solutions.append(solution)
+        return True
+    
+    res = False
+    # Thử đặt hậu ở tất cả các hàng của cột hiện tại
+    for i in range(n):
+        if is_safe(board, i, col, n):
+            # Đặt hậu ở vị trí này
+            board[i][col] = 1
+            
+            # Đệ quy để đặt các hậu còn lại
+            res = solve_n_queens_util(board, col + 1, n, solutions) or res
+            
+            # Backtrack
+            board[i][col] = 0
+    
+    return res
+
+def solve_n_queens(n):
+    board = [[0 for _ in range(n)] for _ in range(n)]
+    solutions = []
+    
+    solve_n_queens_util(board, 0, n, solutions)
+    
+    return solutions
+
+# Test cho bài toán 8 quân hậu
+n = 8
+solutions = solve_n_queens(n)
+print(f"Số lượng giải pháp cho bài toán {n} quân hậu: {len(solutions)}")
+
+# In ra một số giải pháp (tối đa 3)
+for i, solution in enumerate(solutions[:3], 1):
+    print(f"\nGiải pháp {i}:")
+    for row in solution:
+        print(" ".join(["Q" if cell == 1 else "." for cell in row]))
+```
+
+### C#
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static bool IsSafe(int[,] board, int row, int col, int n)
+    {
+        // Kiểm tra hàng hiện tại
+        for (int i = 0; i < col; i++)
+            if (board[row, i] == 1)
+                return false;
+        
+        // Kiểm tra đường chéo trên bên trái
+        for (int i = row, j = col; i >= 0 && j >= 0; i--, j--)
+            if (board[i, j] == 1)
+                return false;
+        
+        // Kiểm tra đường chéo dưới bên trái
+        for (int i = row, j = col; i < n && j >= 0; i++, j--)
+            if (board[i, j] == 1)
+                return false;
+        
+        return true;
+    }
+    
+    static bool SolveNQueensUtil(int[,] board, int col, int n, List<int[,]> solutions)
+    {
+        // Nếu tất cả các quân hậu đã được đặt
+        if (col >= n)
+        {
+            int[,] solution = new int[n, n];
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < n; j++)
+                    solution[i, j] = board[i, j];
+            
+            solutions.Add(solution);
+            return true;
+        }
+        
+        bool res = false;
+        // Thử đặt hậu ở tất cả các hàng của cột hiện tại
+        for (int i = 0; i < n; i++)
+        {
+            if (IsSafe(board, i, col, n))
+            {
+                // Đặt hậu ở vị trí này
+                board[i, col] = 1;
+                
+                // Đệ quy để đặt các hậu còn lại
+                res = SolveNQueensUtil(board, col + 1, n, solutions) || res;
+                
+                // Backtrack
+                board[i, col] = 0;
+            }
+        }
+        
+        return res;
+    }
+    
+    static List<int[,]> SolveNQueens(int n)
+    {
+        int[,] board = new int[n, n];
+        List<int[,]> solutions = new List<int[,]>();
+        
+        SolveNQueensUtil(board, 0, n, solutions);
+        
+        return solutions;
+    }
+    
+    static void Main()
+    {
+        int n = 8;
+        List<int[,]> solutions = SolveNQueens(n);
+        
+        Console.WriteLine($"Số lượng giải pháp cho bài toán {n} quân hậu: {solutions.Count}");
+        
+        // In ra một số giải pháp (tối đa 3)
+        for (int s = 0; s < Math.Min(3, solutions.Count); s++)
+        {
+            Console.WriteLine($"\nGiải pháp {s + 1}:");
+            int[,] solution = solutions[s];
+            
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write(solution[i, j] == 1 ? "Q " : ". ");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+```
+
+## Bài 8: Bài toán cái túi (Knapsack)
+
+### Python
+```python
+def knapsack(weights, values, W):
+    n = len(weights)
+    
+    # Khởi tạo bảng lưu kết quả
+    K = [[0 for _ in range(W + 1)] for _ in range(n + 1)]
+    
+    # Duyệt qua tất cả các đồ vật và trọng lượng
+    for i in range(n + 1):
+        for w in range(W + 1):
+            if i == 0 or w == 0:
+                K[i][w] = 0
+            elif weights[i-1] <= w:
+                K[i][w] = max(values[i-1] + K[i-1][w-weights[i-1]], K[i-1][w])
+            else:
+                K[i][w] = K[i-1][w]
+    
+    # Truy vết để tìm các đồ vật được chọn
+    res = K[n][W]
+    w = W
+    selected_items = []
+    
+    for i in range(n, 0, -1):
+        if res <= 0:
+            break
+        
+        # Nếu kết quả này đến từ việc bao gồm đồ vật
+        if res != K[i-1][w]:
+            selected_items.append(i-1)
+            res -= values[i-1]
+            w -= weights[i-1]
+    
+    return K[n][W], selected_items
+
+# Test
+values = [60, 100, 120]
+weights = [10, 20, 30]
+W = 50
+
+max_value, selected_items = knapsack(weights, values, W)
+print(f"Giá trị tối đa: {max_value}")
+print(f"Các đồ vật được chọn (index): {selected_items}")
+```
+
+### C#
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static (int MaxValue, List<int> SelectedItems) Knapsack(int[] weights, int[] values, int W)
+    {
+        int n = weights.Length;
+        
+        // Khởi tạo bảng lưu kết quả
+        int[,] K = new int[n + 1, W + 1];
+        
+        // Duyệt qua tất cả các đồ vật và trọng lượng
+        for (int i = 0; i <= n; i++)
+        {
+            for (int w = 0; w <= W; w++)
+            {
+                if (i == 0 || w == 0)
+                    K[i, w] = 0;
+                else if (weights[i - 1] <= w)
+                    K[i, w] = Math.Max(values[i - 1] + K[i - 1, w - weights[i - 1]], K[i - 1, w]);
+                else
+                    K[i, w] = K[i - 1, w];
+            }
+        }
+        
+        // Truy vết để tìm các đồ vật được chọn
+        int res = K[n, W];
+        int currentW = W;
+        List<int> selectedItems = new List<int>();
+        
+        for (int i = n; i > 0 && res > 0; i--)
+        {
+            // Nếu kết quả này đến từ việc bao gồm đồ vật
+            if (res != K[i - 1, currentW])
+            {
+                selectedItems.Add(i - 1);
+                res -= values[i - 1];
+                currentW -= weights[i - 1];
+            }
+        }
+        
+        return (K[n, W], selectedItems);
+    }
+    
+    static void Main()
+    {
+        int[] values = { 60, 100, 120 };
+        int[] weights = { 10, 20, 30 };
+        int W = 50;
+        
+        var result = Knapsack(weights, values, W);
+        
+        Console.WriteLine($"Giá trị tối đa: {result.MaxValue}");
+        Console.WriteLine($"Các đồ vật được chọn (index): [{string.Join(", ", result.SelectedItems)}]");
+    }
+}
+```
+
+## Bài 9: Sudoku Solver
+
+### Python
+```python
+def print_sudoku(grid):
+    for i in range(9):
+        for j in range(9):
+            print(grid[i][j], end=" ")
+        print()
+
+def find_empty_cell(grid):
+    for i in range(9):
+        for j in range(9):
+            if grid[i][j] == 0:
+                return i, j
+    return None
+
+def is_valid(grid, row, col, num):
+    # Kiểm tra hàng
+    for x in range(9):
+        if grid[row][x] == num:
+            return False
+    
+    # Kiểm tra cột
+    for x in range(9):
+        if grid[x][col] == num:
+            return False
+    
+    # Kiểm tra ô 3x3
+    start_row, start_col = 3 * (row // 3), 3 * (col // 3)
+    for i in range(3):
+        for j in range(3):
+            if grid[i + start_row][j + start_col] == num:
+                return False
+    
+    return True
+
+def solve_sudoku(grid):
+    # Tìm ô trống
+    find = find_empty_cell(grid)
+    if not find:
+        return True
+    
+    row, col = find
+    
+    # Thử các số từ 1 đến 9
+    for num in range(1, 10):
+        if is_valid(grid, row, col, num):
+            # Nếu hợp lệ, đặt số vào ô
+            grid[row][col] = num
+            
+            # Đệ quy để giải tiếp
+            if solve_sudoku(grid):
+                return True
+            
+            # Nếu không dẫn đến lời giải, trả lại giá trị ban đầu
+            grid[row][col] = 0
+    
+    return False
+
+# Test
+grid = [
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+]
+
+print("Sudoku ban đầu:")
+print_sudoku(grid)
+
+if solve_sudoku(grid):
+    print("\nSudoku đã giải:")
+    print_sudoku(grid)
+else:
+    print("Không có lời giải cho Sudoku này")
+```
+
+### C#
+```csharp
+using System;
+
+class Program
+{
+    static void PrintSudoku(int[,] grid)
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                Console.Write(grid[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+    
+    static (int, int)? FindEmptyCell(int[,] grid)
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                if (grid[i, j] == 0)
+                {
+                    return (i, j);
+                }

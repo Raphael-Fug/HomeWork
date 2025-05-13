@@ -1,0 +1,7 @@
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\BruteForce\bin\Debug\BruteForce.exe.config
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\BruteForce\bin\Debug\BruteForce.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\BruteForce\bin\Debug\BruteForce.pdb
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\BruteForce\obj\Debug\BruteForce.csproj.AssemblyReference.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\BruteForce\obj\Debug\BruteForce.csproj.CoreCompileInputs.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\BruteForce\obj\Debug\BruteForce.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\BruteForce\obj\Debug\BruteForce.pdb
