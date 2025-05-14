@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39529441-0C30-4CD8-9A98-3A58207A4543}|BruteForce\\BruteForce.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\bruteforce\\ex1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F141115-F5B7-4EE1-81E3-0ED107CE8C2E}|InClass\\InClass.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\inclass\\ex1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F141115-F5B7-4EE1-81E3-0ED107CE8C2E}|InClass\\InClass.csproj|solutionrelative:inclass\\ex1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F141115-F5B7-4EE1-81E3-0ED107CE8C2E}|InClass\\InClass.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\inclass\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F141115-F5B7-4EE1-81E3-0ED107CE8C2E}|InClass\\InClass.csproj|solutionrelative:inclass\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39529441-0C30-4CD8-9A98-3A58207A4543}|BruteForce\\BruteForce.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\bruteforce\\ex2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39529441-0C30-4CD8-9A98-3A58207A4543}|BruteForce\\BruteForce.csproj|solutionrelative:bruteforce\\ex2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39529441-0C30-4CD8-9A98-3A58207A4543}|BruteForce\\BruteForce.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\bruteforce\\ex1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39529441-0C30-4CD8-9A98-3A58207A4543}|BruteForce\\BruteForce.csproj|solutionrelative:bruteforce\\ex1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEAA3FA4-B260-4C21-AF8E-0104C739C8D2}|Sort\\Sort.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\sort\\bublesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EEAA3FA4-B260-4C21-AF8E-0104C739C8D2}|Sort\\Sort.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\sort\\bublesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEAA3FA4-B260-4C21-AF8E-0104C739C8D2}|Sort\\Sort.csproj|solutionrelative:sort\\bublesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -44,18 +56,55 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ex1.cs",
-              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\BruteForce\\ex1.cs",
-              "RelativeDocumentMoniker": "BruteForce\\ex1.cs",
-              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\BruteForce\\ex1.cs",
-              "RelativeToolTip": "BruteForce\\ex1.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwCAAAAAZAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\InClass\\ex1.cs",
+              "RelativeDocumentMoniker": "InClass\\ex1.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\InClass\\ex1.cs",
+              "RelativeToolTip": "InClass\\ex1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T16:34:00.374Z",
+              "WhenOpened": "2025-05-14T08:03:18.533Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Sort.cs",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\InClass\\Sort.cs",
+              "RelativeDocumentMoniker": "InClass\\Sort.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\InClass\\Sort.cs",
+              "RelativeToolTip": "InClass\\Sort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T07:00:43.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ex2.cs",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\BruteForce\\ex2.cs",
+              "RelativeDocumentMoniker": "BruteForce\\ex2.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\BruteForce\\ex2.cs",
+              "RelativeToolTip": "BruteForce\\ex2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T16:42:20.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ex1.cs",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\BruteForce\\ex1.cs",
+              "RelativeDocumentMoniker": "BruteForce\\ex1.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\BruteForce\\ex1.cs",
+              "RelativeToolTip": "BruteForce\\ex1.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T16:34:00.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BubleSort.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort\\BubleSort.cs",
               "RelativeDocumentMoniker": "Sort\\BubleSort.cs",
@@ -63,12 +112,11 @@
               "RelativeToolTip": "Sort\\BubleSort.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T16:46:41.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-01T16:46:41.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SelectionSort.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort\\SelectionSort.cs",
               "RelativeDocumentMoniker": "Sort\\SelectionSort.cs",
@@ -80,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "InserrionSort.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort\\InserrionSort.cs",
               "RelativeDocumentMoniker": "Sort\\InserrionSort.cs",
