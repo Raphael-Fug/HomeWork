@@ -1,0 +1,543 @@
+# Các bài toán quy hoạch động từ dễ đến khó (với code Python)
+
+Dưới đây là lời giải và code Python cho các bài toán quy hoạch động, từ dễ đến khó:
+
+## Mức độ cơ bản
+
+### 1. Dãy Fibonacci
+
+```python
+# Cách đơn giản với mảng
+def fibonacci_dp(n):
+    if n <= 1:
+        return n
+    
+    # Mảng lưu kết quả các bài toán con
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    
+    for i in range(2, n + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+    
+    return dp[n]
+
+# Cách tối ưu hơn về bộ nhớ
+def fibonacci_optimized(n):
+    if n <= 1:
+        return n
+    
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    
+    return b
+
+print(fibonacci_dp(10))  # 55
+print(fibonacci_optimized(10))  # 55
+```
+
+### 2. Bài toán leo cầu thang
+
+```python
+def climb_stairs(n):
+    if n <= 2:
+        return n
+    
+    dp = [0] * (n + 1)
+    dp[1] = 1  # 1 cách để leo 1 bậc
+    dp[2] = 2  # 2 cách để leo 2 bậc (1+1 hoặc 2)
+    
+    for i in range(3, n + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+    
+    return dp[n]
+
+print(climb_stairs(5))  # 8
+```
+
+### 3. Tổng con liên tiếp lớn nhất (Kadane's Algorithm)
+
+```python
+def max_subarray_sum(nums):
+    if not nums:
+        return 0
+    
+    current_sum = max_sum = nums[0]
+    
+    for num in nums[1:]:
+        current_sum = max(num, current_sum + num)
+        max_sum = max(max_sum, current_sum)
+    
+    return max_sum
+
+print(max_subarray_sum([-2, 1, -3, 4, -1, 2, 1, -5, 4]))  # 6 (từ [4, -1, 2, 1])
+```
+
+### 4. Đường đi ngắn nhất trong lưới
+
+```python
+def min_path_sum(grid):
+    if not grid or not grid[0]:
+        return 0
+    
+    m, n = len(grid), len(grid[0])
+    dp = [[0] * n for _ in range(m)]
+    dp[0][0] = grid[0][0]
+    
+    # Điền hàng đầu tiên
+    for j in range(1, n):
+        dp[0][j] = dp[0][j-1] + grid[0][j]
+    
+    # Điền cột đầu tiên
+    for i in range(1, m):
+        dp[i][0] = dp[i-1][0] + grid[i][0]
+    
+    # Điền các ô còn lại
+    for i in range(1, m):
+        for j in range(1, n):
+            dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+    
+    return dp[m-1][n-1]
+
+grid = [
+    [1, 3, 1],
+    [1, 5, 1],
+    [4, 2, 1]
+]
+print(min_path_sum(grid))  # 7 (đường đi: 1→3→1→1→1)
+```
+
+## Mức độ trung bình
+
+### 5. Bài toán cái túi 0-1 (Knapsack Problem)
+
+```python
+def knapsack_01(weights, values, capacity):
+    n = len(weights)
+    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]
+    
+    for i in range(1, n + 1):
+        for w in range(capacity + 1):
+            if weights[i-1] <= w:
+                # Lấy max của việc chọn hoặc không chọn vật phẩm thứ i
+                dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w])
+            else:
+                # Không thể chọn vật phẩm thứ i do quá nặng
+                dp[i][w] = dp[i-1][w]
+    
+    return dp[n][capacity]
+
+weights = [2, 3, 4, 5]
+values = [3, 4, 5, 6]
+capacity = 8
+print(knapsack_01(weights, values, capacity))  # 10
+```
+
+### 6. Dãy con tăng dài nhất (LIS)
+
+```python
+def longest_increasing_subsequence(nums):
+    if not nums:
+        return 0
+    
+    n = len(nums)
+    dp = [1] * n  # dp[i] = độ dài dãy con tăng dài nhất kết thúc ở nums[i]
+    
+    for i in range(1, n):
+        for j in range(i):
+            if nums[i] > nums[j]:
+                dp[i] = max(dp[i], dp[j] + 1)
+    
+    return max(dp)
+
+print(longest_increasing_subsequence([10, 9, 2, 5, 3, 7, 101, 18]))  # 4 ([2, 5, 7, 101] hoặc [2, 3, 7, 101])
+```
+
+### 7. Chuỗi con chung dài nhất (LCS)
+
+```python
+def longest_common_subsequence(text1, text2):
+    m, n = len(text1), len(text2)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if text1[i-1] == text2[j-1]:
+                dp[i][j] = dp[i-1][j-1] + 1
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    
+    return dp[m][n]
+
+print(longest_common_subsequence("abcde", "ace"))  # 3 ("ace")
+```
+
+### 8. Chia mảng thành các phần có tổng bằng nhau
+
+```python
+def can_partition(nums):
+    total_sum = sum(nums)
+    
+    # Nếu tổng lẻ, không thể chia đôi
+    if total_sum % 2 != 0:
+        return False
+    
+    target = total_sum // 2
+    n = len(nums)
+    
+    # dp[i] = True nếu có thể tạo tổng i từ các phần tử của mảng
+    dp = [False] * (target + 1)
+    dp[0] = True  # Luôn có thể tạo tổng 0
+    
+    for num in nums:
+        for j in range(target, num - 1, -1):
+            dp[j] = dp[j] or dp[j - num]
+    
+    return dp[target]
+
+print(can_partition([1, 5, 11, 5]))  # True ([1, 5, 5] và [11])
+print(can_partition([1, 2, 3, 5]))   # False
+```
+
+### 9. Cắt thanh (Rod Cutting)
+
+```python
+def rod_cutting(prices, n):
+    # prices[i] là giá của thanh có độ dài i+1
+    dp = [0] * (n + 1)
+    
+    for i in range(1, n + 1):
+        max_val = float('-inf')
+        for j in range(i):
+            # Cắt thanh tại vị trí j
+            max_val = max(max_val, prices[j] + dp[i - j - 1])
+        dp[i] = max_val
+    
+    return dp[n]
+
+prices = [1, 5, 8, 9, 10, 17, 17, 20]  # Giá của các thanh có độ dài 1, 2, ..., 8
+n = 8
+print(rod_cutting(prices, n))  # 22
+```
+
+## Mức độ nâng cao
+
+### 10. Bài toán người du lịch (TSP) với quy hoạch động
+
+```python
+def traveling_salesman(distances):
+    n = len(distances)
+    # 2^n trạng thái cho các tập con của đỉnh
+    # n đỉnh cuối trong mỗi đường đi
+    dp = [[float('inf')] * n for _ in range(1 << n)]
+    
+    # Bắt đầu từ đỉnh 0
+    dp[1][0] = 0
+    
+    # Duyệt qua tất cả các tập con đỉnh
+    for mask in range(1, 1 << n):
+        for end in range(n):
+            # Nếu đỉnh end không nằm trong tập con, bỏ qua
+            if not (mask & (1 << end)):
+                continue
+            
+            # Tập con không bao gồm đỉnh end
+            prev_mask = mask ^ (1 << end)
+            
+            # Nếu prev_mask = 0, tức là end là đỉnh bắt đầu, chỉ xét với end = 0
+            if prev_mask == 0:
+                if end == 0:
+                    dp[mask][end] = 0
+                continue
+            
+            # Thử tất cả các đỉnh trước đó có thể đi đến end
+            for prev in range(n):
+                if not (prev_mask & (1 << prev)):
+                    continue
+                dp[mask][end] = min(dp[mask][end], dp[prev_mask][prev] + distances[prev][end])
+    
+    # Tính đường đi tối ưu trở về đỉnh 0
+    final_mask = (1 << n) - 1
+    result = min(dp[final_mask][end] + distances[end][0] for end in range(1, n))
+    
+    return result
+
+distances = [
+    [0, 10, 15, 20],
+    [10, 0, 35, 25],
+    [15, 35, 0, 30],
+    [20, 25, 30, 0]
+]
+print(traveling_salesman(distances))  # 80
+```
+
+### 11. Chia mảng thành k phần có tổng bằng nhau
+
+```python
+def can_partition_k_subsets(nums, k):
+    total_sum = sum(nums)
+    if total_sum % k != 0:
+        return False
+    
+    target = total_sum // k
+    nums.sort(reverse=True)  # Sắp xếp giảm dần để tối ưu hóa
+    if nums[0] > target:
+        return False
+    
+    n = len(nums)
+    used = [False] * n
+    
+    def backtrack(k, curr_sum, start_idx):
+        if k == 0:
+            return all(used)
+        
+        if curr_sum == target:
+            # Tìm tập con tiếp theo
+            return backtrack(k - 1, 0, 0)
+        
+        for i in range(start_idx, n):
+            if used[i] or curr_sum + nums[i] > target:
+                continue
+            
+            # Tránh trùng lặp với phần tử có giá trị bằng nhau
+            if i > start_idx and nums[i] == nums[i - 1] and not used[i - 1]:
+                continue
+                
+            used[i] = True
+            if backtrack(k, curr_sum + nums[i], i + 1):
+                return True
+            used[i] = False
+            
+            # Nếu không thể thêm phần tử nào, quay lui
+            if curr_sum == 0:
+                return False
+        
+        return False
+    
+    return backtrack(k, 0, 0)
+
+print(can_partition_k_subsets([4, 3, 2, 3, 5, 2, 1], 4))  # True
+```
+
+### 12. Bài toán xếp balo nhiều lần (Unbounded Knapsack)
+
+```python
+def unbounded_knapsack(weights, values, capacity):
+    n = len(weights)
+    dp = [0] * (capacity + 1)
+    
+    for w in range(1, capacity + 1):
+        for i in range(n):
+            if weights[i] <= w:
+                dp[w] = max(dp[w], dp[w - weights[i]] + values[i])
+    
+    return dp[capacity]
+
+weights = [2, 3, 4, 5]
+values = [3, 4, 5, 6]
+capacity = 8
+print(unbounded_knapsack(weights, values, capacity))  # 12
+```
+
+### 13. Bài toán đoạn palindrome
+
+```python
+def min_cuts_palindrome(s):
+    n = len(s)
+    # is_palindrome[i][j] = True nếu s[i:j+1] là palindrome
+    is_palindrome = [[False] * n for _ in range(n)]
+    
+    # Mọi chuỗi 1 ký tự đều là palindrome
+    for i in range(n):
+        is_palindrome[i][i] = True
+    
+    # Kiểm tra các chuỗi 2 ký tự
+    for i in range(n - 1):
+        if s[i] == s[i + 1]:
+            is_palindrome[i][i + 1] = True
+    
+    # Kiểm tra các chuỗi dài hơn
+    for length in range(3, n + 1):
+        for i in range(n - length + 1):
+            j = i + length - 1
+            if s[i] == s[j] and is_palindrome[i + 1][j - 1]:
+                is_palindrome[i][j] = True
+    
+    # dp[i] = số lượng cắt tối thiểu cho s[0:i]
+    dp = [float('inf')] * n
+    
+    for i in range(n):
+        if is_palindrome[0][i]:
+            dp[i] = 0  # Toàn bộ chuỗi s[0:i+1] là palindrome, không cần cắt
+        else:
+            for j in range(i):
+                if is_palindrome[j + 1][i]:
+                    dp[i] = min(dp[i], dp[j] + 1)
+    
+    return dp[n - 1]
+
+print(min_cuts_palindrome("aab"))  # 1 (a|ab)
+print(min_cuts_palindrome("abbac"))  # 1 (abba|c)
+```
+
+## Mức độ chuyên sâu
+
+### 14. Quy hoạch động trên cây - Tập độc lập lớn nhất
+
+```python
+from collections import defaultdict
+
+def max_independent_set(n, edges):
+    # Xây dựng cây
+    tree = defaultdict(list)
+    for u, v in edges:
+        tree[u].append(v)
+        tree[v].append(u)
+    
+    # dp[node][0] = kích thước tập độc lập lớn nhất không chứa node
+    # dp[node][1] = kích thước tập độc lập lớn nhất chứa node
+    dp = [[0, 0] for _ in range(n+1)]
+    
+    def dfs(node, parent):
+        dp[node][0] = 0  # Không chọn node
+        dp[node][1] = 1  # Chọn node
+        
+        for child in tree[node]:
+            if child != parent:
+                dfs(child, node)
+                dp[node][0] += max(dp[child][0], dp[child][1])  # Có thể chọn hoặc không chọn child
+                dp[node][1] += dp[child][0]  # Không thể chọn child (vì đã chọn node)
+    
+    dfs(1, -1)  # Bắt đầu từ đỉnh 1, không có parent
+    return max(dp[1][0], dp[1][1])
+
+# Ví dụ: cây có 4 đỉnh
+edges = [(1, 2), (1, 3), (1, 4)]
+print(max_independent_set(4, edges))  # 3 (chọn các đỉnh 2, 3, 4)
+```
+
+### 15. Quy hoạch động với bit mask - Chia mảng thành nhóm có tổng bằng nhau
+
+```python
+def can_partition_equal_sum_groups(nums, k):
+    total_sum = sum(nums)
+    if total_sum % k != 0:
+        return False
+    
+    target = total_sum // k
+    n = len(nums)
+    
+    # Sử dụng bitmask để đại diện cho các phần tử đã được sử dụng
+    # dp[mask] = số nhóm đã được hoàn thành khi trạng thái sử dụng các phần tử là mask
+    dp = [-1] * (1 << n)
+    dp[0] = 0  # Không sử dụng phần tử nào, 0 nhóm hoàn thành
+    
+    # sums[mask] = tổng của các phần tử được chọn trong mask
+    sums = [0] * (1 << n)
+    for mask in range(1, 1 << n):
+        for i in range(n):
+            if mask & (1 << i):
+                submask = mask ^ (1 << i)
+                sums[mask] = sums[submask] + nums[i]
+                break
+    
+    for mask in range(1, 1 << n):
+        if dp[mask] == -1:
+            continue
+        
+        # Tìm các phần tử chưa được sử dụng
+        remain = ((1 << n) - 1) ^ mask
+        submask = remain
+        while submask:
+            # Nếu tổng của submask = target, thêm 1 nhóm hoàn thành
+            if sums[submask] == target:
+                next_mask = mask | submask
+                dp[next_mask] = max(dp[next_mask], dp[mask] + 1)
+            
+            # Sinh submask tiếp theo
+            submask = (submask - 1) & remain
+    
+    return dp[(1 << n) - 1] == k
+
+print(can_partition_equal_sum_groups([4, 3, 2, 3, 5, 2, 1], 4))  # True
+```
+
+### 16. Quy hoạch động giải bài toán Sudoku
+
+```python
+def solve_sudoku(board):
+    n = 9  # Kích thước bảng Sudoku 9x9
+    
+    # Kiểm tra xem có thể đặt số digit vào ô (row, col) không
+    def is_valid(row, col, digit):
+        # Kiểm tra hàng
+        for j in range(n):
+            if board[row][j] == digit:
+                return False
+        
+        # Kiểm tra cột
+        for i in range(n):
+            if board[i][col] == digit:
+                return False
+        
+        # Kiểm tra ô 3x3
+        start_row, start_col = 3 * (row // 3), 3 * (col // 3)
+        for i in range(3):
+            for j in range(3):
+                if board[start_row + i][start_col + j] == digit:
+                    return False
+        
+        return True
+    
+    def solve(row, col):
+        # Nếu đã đến cuối bảng
+        if row == n - 1 and col == n:
+            return True
+        
+        # Nếu đến cuối hàng, chuyển sang hàng tiếp theo
+        if col == n:
+            row += 1
+            col = 0
+        
+        # Nếu ô đã có số, chuyển sang ô tiếp theo
+        if board[row][col] != 0:
+            return solve(row, col + 1)
+        
+        # Thử đặt các số từ 1 đến 9
+        for digit in range(1, 10):
+            if is_valid(row, col, digit):
+                board[row][col] = digit
+                
+                if solve(row, col + 1):
+                    return True
+                
+                # Quay lui nếu không tìm được lời giải
+                board[row][col] = 0
+        
+        return False
+    
+    if solve(0, 0):
+        return board
+    else:
+        return None
+
+# Ví dụ bảng Sudoku (0 đại diện cho ô trống)
+board = [
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+]
+
+solution = solve_sudoku(board)
+if solution:
+    for row in solution:
+        print(row)
+```
+
+Đây là những giải pháp quy hoạch động phổ biến từ dễ đến khó bằng Python. Bạn có muốn tôi giải thích chi tiết về thuật toán nào không, hoặc có bài toán cụ thể nào bạn muốn tìm hiểu thêm?

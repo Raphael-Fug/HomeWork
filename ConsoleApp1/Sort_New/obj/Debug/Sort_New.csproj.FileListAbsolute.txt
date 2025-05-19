@@ -1,0 +1,7 @@
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Sort_New\bin\Debug\Sort_New.exe.config
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Sort_New\bin\Debug\Sort_New.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Sort_New\bin\Debug\Sort_New.pdb
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Sort_New\obj\Debug\Sort_New.csproj.AssemblyReference.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Sort_New\obj\Debug\Sort_New.csproj.CoreCompileInputs.cache
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Sort_New\obj\Debug\Sort_New.exe
+D:\code_dev\Python_Learning\HomeWork17.04.25\ConsoleApp1\Sort_New\obj\Debug\Sort_New.pdb
