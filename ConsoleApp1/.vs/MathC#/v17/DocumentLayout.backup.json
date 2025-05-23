@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\sort_new\\quick_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\sort_new\\heap_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|solutionrelative:sort_new\\heap_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\sort_new\\insertion_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|solutionrelative:sort_new\\insertion_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\sort_new\\bubble_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|solutionrelative:sort_new\\bubble_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\sort_new\\selection_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|solutionrelative:sort_new\\selection_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\sort_new\\quick_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|solutionrelative:sort_new\\quick_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\sort_new\\merge_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\sort_new\\merge_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|solutionrelative:sort_new\\merge_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|d:\\code_dev\\python_learning\\homework17.04.25\\consoleapp1\\sort_new\\selection_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2302EE44-FE7C-4948-9F11-B95DCEBEE705}|Sort_New\\Sort_New.csproj|solutionrelative:sort_new\\selection_sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +50,58 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Insertion_Sort.cs",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Insertion_Sort.cs",
+              "RelativeDocumentMoniker": "Sort_New\\Insertion_Sort.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Insertion_Sort.cs",
+              "RelativeToolTip": "Sort_New\\Insertion_Sort.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:14:51.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bubble_Sort.cs",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Bubble_Sort.cs",
+              "RelativeDocumentMoniker": "Sort_New\\Bubble_Sort.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Bubble_Sort.cs",
+              "RelativeToolTip": "Sort_New\\Bubble_Sort.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:18:49.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Heap_Sort.cs",
+              "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Heap_Sort.cs",
+              "RelativeDocumentMoniker": "Sort_New\\Heap_Sort.cs",
+              "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Heap_Sort.cs",
+              "RelativeToolTip": "Sort_New\\Heap_Sort.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T17:09:46.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Quick_Sort.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Quick_Sort.cs",
               "RelativeDocumentMoniker": "Sort_New\\Quick_Sort.cs",
               "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Quick_Sort.cs",
               "RelativeToolTip": "Sort_New\\Quick_Sort.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAuwB8AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwC0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T16:50:38.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T16:50:38.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Merge_Sort.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Merge_Sort.cs",
               "RelativeDocumentMoniker": "Sort_New\\Merge_Sort.cs",
@@ -59,18 +109,17 @@
               "RelativeToolTip": "Sort_New\\Merge_Sort.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAYwEQAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T16:31:15.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T16:31:15.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Selection_Sort.cs",
               "DocumentMoniker": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Selection_Sort.cs",
               "RelativeDocumentMoniker": "Sort_New\\Selection_Sort.cs",
               "ToolTip": "D:\\code_dev\\Python_Learning\\HomeWork17.04.25\\ConsoleApp1\\Sort_New\\Selection_Sort.cs",
               "RelativeToolTip": "Sort_New\\Selection_Sort.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T16:23:07.101Z",
               "EditorCaption": ""

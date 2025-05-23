@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Heap_Sort.cs" />
-    <Compile Include="Quick_Sort.cs" />
+    <None Include="Quick_Sort.cs" />
     <None Include="Bubble_Sort.cs" />
     <None Include="Insertion_Sort.cs" />
     <None Include="Merge_Sort.cs" />
